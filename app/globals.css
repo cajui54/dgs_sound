@@ -4,4 +4,24 @@
 
 body {
   background-color: #0a0a0a;
+  color: #fff;
+  height: 100vh;
+}
+a {
+  cursor: pointer;
+}
+.delayTransition {
+  transition: all 0.5s ease-in-out;
+}
+.menuLinks a {
+  @apply relative w-full text-center py-6 text-lg delayTransition;
+}
+.menuLinks a:hover {
+  @apply font-extrabold;
+}
+.menuLinks a:hover div {
+  @apply w-8 bg-yellow-500 mx-auto h-1 rounded-lg;
+}
+.navbarScreenMD {
+  @apply lg:flex-row lg:top-0 lg:h-16 lg:!w-[90%];
 }
