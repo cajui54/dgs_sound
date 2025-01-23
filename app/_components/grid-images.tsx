@@ -18,8 +18,8 @@ const images = [
 const GridImagesComponent = () => {
   const [index, setIndex] = useState<number>(0);
   return (
-    <div className="w-[95%] min-h-[550px] mx-auto my-4">
-      <div className="rounded-2xl w-[99%] h-[400px] sm:h-[500px] overflow-hidden m-auto">
+    <div className="w-[95%] min-h-[550px] mx-auto my-4 ">
+      <div className="rounded-2xl w-[99%] h-[400px] sm:h-[500px] lg:w-[500px] overflow-hidden m-auto">
         <Image
           src={images[index].path}
           alt={images[index].info}

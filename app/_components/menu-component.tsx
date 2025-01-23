@@ -1,4 +1,4 @@
-import Link from "next/link";
+"use client";
 import React from "react";
 import imgFalante01 from "@/app/_assets/images/alto-falantes/falante02-removebg.png";
 import imgCar01 from "@/app/_assets/images/cars/carro02-removebg.png";
@@ -6,12 +6,23 @@ import imgGameleira from "@/app/_assets/images/gameleiraCity.jpg";
 import imgCar02 from "@/app/_assets/images/cars/carro03.jpg";
 import Image from "next/image";
 import { FaLocationDot } from "react-icons/fa6";
-import { FcCellPhone } from "react-icons/fc";
+import { Link } from "react-scroll";
 
 const MenuComponent = () => {
+  const handleSetActive = (to: string) => {
+    console.log(to);
+  };
   return (
     <div className="mx-auto flex justify-between items-center -mt-52 sm:w-[500px] w-[98%] h-40">
-      <Link href={""}>
+      <Link
+        to="ancorAbout"
+        spy={true}
+        smooth={true}
+        offset={-80}
+        duration={500}
+        activeClass="active"
+        onSetActive={handleSetActive}
+      >
         <div className="w-[80px] rounded-full h-[80px] flex flex-col justify-center items-center bg-neutral-800 border border-neutral-700">
           <Image
             src={imgCar01}
@@ -24,7 +35,16 @@ const MenuComponent = () => {
         </span>
       </Link>
 
-      <Link href={""} className="relative">
+      <Link
+        to="ancorLocation"
+        spy={true}
+        smooth={true}
+        offset={-80}
+        duration={500}
+        activeClass="active"
+        onSetActive={handleSetActive}
+        className="relative"
+      >
         <div className="overflow-hidden w-[80px] rounded-full h-[80px] flex flex-col justify-center items-center bg-neutral-800 border border-neutral-700">
           <Image
             src={imgGameleira}
@@ -38,7 +58,15 @@ const MenuComponent = () => {
         </span>
       </Link>
 
-      <Link href={""}>
+      <Link
+        to="ancorAltoFalantes"
+        spy={true}
+        smooth={true}
+        offset={-80}
+        duration={500}
+        activeClass="active"
+        onSetActive={handleSetActive}
+      >
         <div className="w-[80px] rounded-full h-[80px] flex flex-col justify-center items-center bg-neutral-800 border border-neutral-700">
           <Image
             src={imgFalante01}
@@ -51,7 +79,15 @@ const MenuComponent = () => {
         </span>
       </Link>
 
-      <Link href={""} className="relative">
+      <Link
+        to="ancorProject"
+        spy={true}
+        smooth={true}
+        offset={-80}
+        duration={500}
+        activeClass="active"
+        className="relative"
+      >
         <div className="overflow-hidden w-[80px] rounded-full h-[80px] flex flex-col justify-center items-center bg-neutral-800 border border-neutral-700">
           <Image
             src={imgCar02}

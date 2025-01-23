@@ -2,12 +2,15 @@ import React from "react";
 import GridImagesComponent from "./grid-images";
 import ListServiceComponent from "./list-service-component";
 import LinkWhats from "./link-whats";
-import SubtiltesComponent from "./subtiltes-component";
+import SubtitlesComponent from "./subtiltes-component";
 
 const AboutComponent = () => {
   return (
-    <div className="w-full pt-4 overflow-hidden min-h-[100vh] my-64 sm:w-[800px] mx-auto">
-      <SubtiltesComponent subtitle="Sobre à" title="DGS Sound" />
+    <div
+      id="ancorAbout"
+      className="w-full pt-12 overflow-hidden my-48 sm:w-[800px] mx-auto"
+    >
+      <SubtitlesComponent subtitle="Sobre à" title="DGS Sound" />
       <GridImagesComponent />
 
       <div className="w-[90%] mx-auto">

@@ -3,9 +3,9 @@ interface TitlesProps {
   subtitle: string;
   title: string;
 }
-const SubtiltesComponent = ({ subtitle, title }: TitlesProps) => {
+const SubtitlesComponent = ({ subtitle, title }: TitlesProps) => {
   return (
-    <div>
+    <div className="w-[94%]  text-center mx-auto">
       <h3 className="text-2xl text-green-600">{subtitle}</h3>
       <h2 className="text-5xl -mt-2 text-yellow-400 font-black">
         {title}
@@ -15,4 +15,4 @@ const SubtiltesComponent = ({ subtitle, title }: TitlesProps) => {
   );
 };
 
-export default SubtiltesComponent;
+export default SubtitlesComponent;
